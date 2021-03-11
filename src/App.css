@@ -1,38 +1,345 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Suez+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body, html {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  background-color: #000;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: lighter;
+}
+
+header {
+  width: 100%;
+  padding: 10px 0.5% 0px 0.5%;
+  background: transparent;
+  float: left;
+  position: fixed;
+}
+
+header #logo {
+  color: #fff;
+  cursor: pointer;
+}
+
+header #logo span {
+  font-size: 3em;
+  line-height: 45px;
+  margin-left: 40px;
+  font-family: 'Suez One', serif;
+}
+
+@media (min-width: 701px) {
+  #logo {
+    float: left;
+    width: 30%;
+    font-size: 1.1em;
+  }
+  #about {
+    float: right;
+    width: 67%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@media (max-width: 700px) {
+  #logo {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1.5em;
+  }
+  #about {
+    float: left;
+    width: 100%;
+  }
+}
+
+#about {
+  text-align: center;
+  font-size: 1em;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+#about > a {
+  color: #fff;
+}
+
+#about > a:hover {
+  color: #b0b0b0;
+  text-decoration: underline;
+}
+
+#about > a:not(:last-child) {
+  margin-right: 7%;
+}
+
+.fixed {
+  z-index: 5000;
+  background-color: #fff;
+  border-bottom: 1px solid silver;
+}
+
+.fixed #about a {
+  color: #343434;
+}
+
+.fixed #logo span {
+  color: #343434;
+}
+
+.fixed #about a:hover {
+  color: #7c7c7c;
+}
+
+#top {
+  width: 100%;
+  height: 1000px;
+  background-image: url(https://edukite.org/wp-content/uploads/2018/03/79-Introduction-to-Computer-Science-and-Programming-in-Python.jpg);
+  background-blend-mode: multiply; /* Много слоев */
+  background-color: #2e3a44; /* Фоновый цвет */
+  background-size: cover; /* Картинка на всю ширину */
+  text-align: center; /* Текст по центру */
+  color: #fff;
+  font-size: 3em;
+}
+
+@media (min-width: 1001px) {
+  #top {
+    font-size: 3em;
+    height: 1000px;
+  }
+}
+
+@media (max-width: 1000px) and (min-width: 651px) {
+  #top {
+    font-size: 2em;
+    height: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  #top {
+    font: 1.3em;
+    padding-top: 50%;
+    height: 500px;
+  }
+}
+
+#top h1 {
+  padding-top: 20%;
+}
+
+#top h3 {
+  color: #ccc;
+}
+
+#main {
+  padding: 100px 20%;
+  width: 60%;
+  float: left;
+  background-color: #f6f6f6;
+  border-top: 2px solid silver;
+  color: #484848;
+  font-size: 1.3em;
+}
+
+@media (min-width: 1401px) {
+  #main {
+    padding: 100px 20%;
+    width: 60%;
+  }
+}
+
+@media (max-width: 1400px) {
+  #main {
+    padding: 100px 10%;
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  #main div {
+    width: 98% !important;
+  }
+}
+
+#main div {
+  width: 48%;
+  margin-right: 2%;
+  float: left;
+}
+
+#main h2 {font-size: 3em;}
+#main span {color: #a0a0a0;}
+
+#technologies {
+  float: left;
+  background-image: url(https://abit.pskgu.ru/download.php/pskgu/files/PAGES/IMAGES/77501720-263a-4348-8912-95ac72eb1c2c/E32F0CE8813460190632BBB8BA933FC9?title=5.jpg);
+  background-blend-mode: multiply;
+  background-color: #4f1c75;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 100px 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+#technologies h2 {font-size: 4em;}
+#technologies h4 {color: #a0a0a0;}
+
+#technologies .img {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+  margin-top: 50px;
+}
+
+#technologies .img:nth-child(odd) {
+  margin-left: 18%;
+}
+
+#technologies img {
+  background: #fafafa ;
+  padding: 5px;
+  border: 2px solid silver;
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  min-height: 200px;
+  max-height: 200px;
+}
+
+#technologies span {
+  float: left;
+  width: 100%;
+  font-size: 2em;
+  margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+  #technologies .img {
+    width: 80% !important;
+    margin-right: 0 !important;
+    margin-left: 10% !important;
+  }
+}
+
+#contacts {
+  width: 100%;
+  float: left;
+  padding-bottom: 40px;
+  padding-top: 70px;
+  border-top: 4px solid #ccc;
+  background-color: #f4f4f4;
+}
+
+#contacts h5{
+  font-size: 3em;
+  color: #4f4f4f;
+}
+
+#form_input {
+  margin-top: 15px;
+  width: 35%;
+  margin-left: 38%;
+  font-size: 1.1em;
+}
+
+#form_input label {
+  color: #505050;
+  cursor: pointer;
+  font-size: 1.4em;
+  font-family: 'Roboto Slab', serif;
+}
+
+#form_input label span {
+  color: #e87e7e;
+}
+
+#form_input input, #form_input textarea {
+  margin-bottom: 10px;
+  width: 70%;
+  padding: 10px 2%;
+  border-radius: 7px;
+  border: 2px solid silver;
+  font-size: 0.9em;
+  color: #4a4a4a;
+}
+
+#form_input input:focus, form_input textarea:focus {
+  border-color: #333;
+}
+
+.btn {
+  float: left;
+  border-radius: 5px;
+  padding: 5px 9px;
+  font-size: 1.2em;
+  background-color: #ec65e0;
+  text-shadow: #454545 0 0 2px;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover {
+  background-color: #c15443;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#lates_posts {
+  float: left;
+  width: 70%;
+  height: auto;
+  padding-left: 15%;
+  padding-right: 15%;
+  background-color: #f6f6f6;
+  border-top: 3px solid silver;
+  font-family: 'Roboto Slab', serif;
+}
+
+.post {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.post h1 {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.post p {
+  text-align: justify;
+}
+
+#projects {
+  float: left;
+  width: 100%;
+  background-color: #f6f6f6;
+  border-top: 3px solid silver;
+}
+
+#footer {
+  float: left;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 100%;
+  background-image: url(https://edukite.org/wp-content/uploads/2018/03/79-Introduction-to-Computer-Science-and-Programming-in-Python.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-color: #2e3a44; /* Фоновый цвет */
+  text-align: center; /* Текст по центру */
+  color: #fff;
 }
